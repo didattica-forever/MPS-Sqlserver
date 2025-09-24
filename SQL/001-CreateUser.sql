@@ -1,3 +1,10 @@
+--
+-- per eseguire la procedura
+-- occorre collegarsi come sa
+-- oppure con un utente avente ruolo sysadmin
+--
+
+
 /*
 Al primo avvio di SQL Server, probabilmente si utilizza l'account di amministratore predefinito (sa) 
 oppure un utente autenticato con i permessi di sysadmin. 
