@@ -71,4 +71,36 @@ insert into ordini values (6, date('01/06/2018', 'DD-MM-YYYY') ,144.00,   9);
 select count(*) from clienti;
 select count(*) from ordini;
 
+select a.nome, a.cognome, b.data, b.valore 
+from clienti a 
+inner join ordini b 
+on a.id_cliente = b.id_cliente;
+
+-- left join (null al posto dei dati della tabella DX)
+select nome, cognome, data, valore 
+from clienti a 
+left join ordini b 
+on a.id_cliente = b.id_cliente;
+
+-- left join with exclusion (null al posto dei dati della tabella DX)
+select nome, cognome, data, valore 
+from clienti a 
+left join ordini b 
+on a.id_cliente = b.id_cliente
+where b.valore is null;
+
+
+-- right join
+select nome, cognome, data, valore 
+from clienti a 
+right join ordini b 
+on a.id_cliente = b.id_cliente;
+
+-- right join with exclusion
+select nome, cognome, data, valore 
+from clienti a 
+right join ordini b 
+on a.id_cliente = b.id_cliente
+where a.id_cliente is null;
+
 
