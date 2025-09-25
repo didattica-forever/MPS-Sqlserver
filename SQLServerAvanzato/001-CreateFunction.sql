@@ -7,7 +7,7 @@ IF OBJECT_ID('dbo.GetRandomNumber') IS NOT NULL
     DROP FUNCTION dbo.GetRandomNumber;
 GO -- end of batch
 
-CREATE FUNCTION dbo.GetRandomNumber (
+CREATE FUNCTION dbo.GetRandomNumber ( -- int GetRandomNumber(int Min, int Max, float RandomSeed) {}
     @Min INT,
     @Max INT,
     @RandomSeed FLOAT -- Riceve il valore casuale (tra 0 e 1) come parametro
